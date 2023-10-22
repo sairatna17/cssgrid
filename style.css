@@ -1,0 +1,335 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+:root{
+    --main-radius: 10px;
+    --main-padding: 10px;
+}
+
+.container{
+    /*styling*/
+    font-size: 14px ;
+    /*------*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1 fr 1fr 1.8 fr 2 fr 1 fr 1 fr 1 fr 0.1fr;
+    grid-gap: 0.2rem;
+    grid-template-areas:
+    "nav nav nav"
+    "main main main"
+    "sidebar about about"
+    "sidebar edu_heading edu_heading"
+    "sidebar education education1"
+    "sidebar projects projects "
+    "sidebar Experience Experience"
+    "sidebar volunteer volunteer"
+    "footer footer footer"
+}
+
+/*Styling for navigation bar*/
+nav{
+    background-color: #8720E6;
+    grid-area: nav;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    padding: 5px 0;
+}
+
+nav a {
+    color:#EFF1DB;
+    text-decoration: none;
+    margin-right: 40px;
+    display: inline-block; 
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif; 
+}
+
+nav a:hover {
+    background-color: #de93de;
+    color: red;
+    font-family: 'Aclonica';
+}
+
+.hamburger {
+    display: none;
+}
+
+.mob_navigation {
+    display: none;
+}
+
+/*Styling for main section*/
+main{
+    grid-area: main;
+    background: #d8f3dc;
+}
+
+.info{
+    background-color: mistyrose;
+    padding: 20px;
+    text-align: center;
+    color: #0101DF;
+    font-family: 'cursive-font', cursive, sans-serif;
+    font-weight: 900;
+}
+
+#myimg{
+    width: 150px;
+    height:150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/*Styling for sidebar*/
+#sidebar{
+    grid-area: sidebar;
+    background: #E6E6E6;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* Style for each sidebar section */
+.sidebar-section.skills {
+    background-color: #CEECF5; 
+    border-radius: var(--main-radius);
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+  
+.sidebar-section.blogs {
+    background-color: #A9D0F5;
+    border-radius: var(--main-radius);
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+  
+.sidebar-section.languages {
+    background-color: #A9BCF5; 
+    border-radius: var(--main-radius);
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+  
+.sidebar-section.hobbies {
+    background-color: #A9A9F5; 
+    border-radius: var(--main-radius);
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+  
+.sidebar-section.contact {
+    background-color: #BCA9F5; 
+    border-radius: var(--main-radius);
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+
+/*Styling for About me section*/
+#about{
+    grid-area: about;
+    background: #F7F8E0;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/*Styling for education section*/
+.edu_heading{
+    grid-area: edu_heading;
+    background: #F8ECE0;
+    flex-direction: column; 
+    justify-content: center; 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+#education{
+    grid-area: education;
+    background: #F8ECE0;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    
+}
+
+#education1{
+    grid-area: education1;
+    background: #F8ECE0;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+#edu_img {
+    max-width: 100px;
+    max-height: 100px;
+    text-align: center;
+}
+
+/*Styling for projects section*/
+#projects{
+    background-color: #F8E6E0;
+    grid-area: projects;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/*Styling for experience section*/
+#Experience{
+    background-color: #F8E0E0;
+    grid-area: Experience;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/*Styling for volunteer section*/
+#volunteer{
+    background-color: #F6D8CE;
+    grid-area: volunteer;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/*Styling for footer section*/
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #8720E6;
+}
+
+footer a {
+    color:#EFF1DB;;
+    text-decoration: none;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+}
+
+footer a:hover {
+    background-color: #f0932b;
+    color: red;
+    font-family: 'Aclonica';
+}
+
+#x{
+    width: 20px;
+    height:20px;
+    padding-right: 10px;
+}
+
+#y{
+    width: 18px;
+    height:18px;
+    padding-right: 10px;
+}
+
+#z{
+    width: 18px;
+    height:18px;
+    padding-right: 10px;
+}
+
+/* mobile layout*/
+@media only screen and (max-width: 500px) {
+    
+    .container {
+        grid-template-columns: 1fr;
+        
+        grid-template-areas:
+            "nav"
+            "main"
+            "about"
+            "edu_heading"
+            "education"
+            "education1"
+            "projects"
+            "Experience"
+            "volunteer"
+            "sidebar"
+            "footer";
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .hamburger{
+        position:relative;
+        display: block;
+        width:35px;
+        cursor: pointer;
+        appearance: none;
+        background: none;
+        outline:none;
+        border: none;
+    }
+
+    .hamburger .icon, .hamburger:after, .hamburger::before{
+        content: '';
+        display: block;
+        width:100%;
+        height:5px;
+        background-color: #f6dafe;
+        margin:6px 0px;
+        transition: 0.4s;
+    }
+
+    .hamburger.is-active:before{
+        transform: rotate(-45deg) translate(-8px,6px);
+    }
+
+    .hamburger.is-active:after{
+        transform: rotate(45deg) translate(-9px,-8px);
+    }
+
+    .hamburger.is-active .icon{
+        opacity: 0;
+    }
+
+    .mob_navigation{
+        position: absolute;
+        top: 10%;
+        left: 100%;
+        width: 200px;
+        height: 160px;
+        display:block;
+        z-index: 98;
+        background-color:rgba(253, 7, 151, 0.3);
+        padding: 10px;
+        margin-left: 20px;
+        transition:0.4s;
+        font-size: 20px;
+    }
+
+    .mob_navigation.is-active{
+        left: 0;
+        display: block;
+    }
+
+    .mob_navigation{
+        display: none;
+    }
+
+    .mob_navigation a{
+        display: block;
+        width: 100%;
+        max-width:200px;
+        text-align: center;
+        margin:0 auto 2px;
+        padding: 2px 2px;
+        background-color: none;
+        color:black;
+        text-decoration: none;
+        float: left;
+    } 
+    
+}
+
